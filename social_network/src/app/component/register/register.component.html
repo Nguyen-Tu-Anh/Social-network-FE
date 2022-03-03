@@ -1,0 +1,35 @@
+<section class="register">
+  <div class="header">
+    <h3>Sign Up</h3>
+    <mat-error class="alert alert-danger" style="width: 380px">{{status}}</mat-error>
+  </div>
+
+  <div class="body">
+
+    <form (ngSubmit)="f.form.valid&&ngSubmit()" #f="ngForm" novalidate>
+      <div class="user_name">
+        <input class="form-control" name="fullName" [(ngModel)]="form.name" #full_name="ngModel" required minlength="3"
+               maxlength="50" matInput placeholder="Full name">
+
+      </div>
+
+      <div class="email_password">
+        <input class="form-control" name="email" [(ngModel)]="form.email" #email="ngModel" placeholder="Email" email required>
+        <mat-error *ngIf="email.hasError('email')">Please include '@'</mat-error>
+
+        <input class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel" required
+               minlength="3" matInput placeholder="Username">
+        <mat-error *ngIf="username.hasError('minlength')">More than 3 characters</mat-error>
+        <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="form.password"
+               #password="ngModel" minlength="6" required>
+        <mat-error *ngIf="password.hasError('minlength')">More than 6 characters</mat-error>
+      </div>
+
+
+      <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications
+        from us and can opt out at any time.</p>
+
+      <button type="submit" class="submit-button">Sign Up</button>
+    </form>
+  </div>
+</section>

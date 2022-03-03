@@ -1,0 +1,41 @@
+<div class="login-container">
+
+  <header class="login__header">
+    <div class="login__header__left">
+      <img alt="logo" src="assets/fb-logo-1.jpg">
+      <h2>Facebook helps you connect and share with the people in your life.</h2>
+    </div>
+
+    <div class="login__header__right">
+      <mat-error *ngIf="isLogin" class="alert alert-danger" style="width: 380px">{{status}}</mat-error>
+
+
+      <mat-card class="login__header__right__card">
+        <mat-card-content class="login__header__right__card__content">
+          <form class="login-form" #f="ngForm" (ngSubmit)="f.form.valid&&ngSubmit()" novalidate>
+            <input name="username" [(ngModel)]="form.username" #username="ngModel" required minlength="3" placeholder="Enter username">
+
+
+            <input type="password" name="password" [(ngModel)]="form.password" #password="ngModel" minlength="6" required placeholder="Enter password">
+
+            <button class="login-button" type="submit">Log In</button>
+
+          </form>
+          <a>Forgotten account?</a>
+          <hr>
+          <button class="create-account" (click)="openRegister()">Create New Account</button>
+        </mat-card-content>
+
+      </mat-card>
+
+      <p class="tagline"><strong>Create a Page</strong> for a celebrity, band or business.</p>
+    </div>
+
+
+  </header>
+
+
+  <footer class="login__footer">
+    <img alt="footer" src="assets/footer_crop.jpg">
+  </footer>
+</div>

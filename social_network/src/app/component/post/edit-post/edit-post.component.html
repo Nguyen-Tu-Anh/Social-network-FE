@@ -1,0 +1,52 @@
+<div class="central-meta postbox">
+  <span class="create-post">Edit Post</span>
+  <!-- add show-post new box -->
+  <div class="new-postbox">
+    <div class="comet-avatar">
+      <img src="{{post.users.avatar}}">
+    </div>
+    <form class="newpst-input" #f="ngForm" (ngSubmit)="f.form.valid&&ngSubmit()">
+      <textarea rows="2" [(ngModel)]="content" name="content"></textarea>
+
+      <div class="attachments">
+        <ul>
+          <li><span class="add-loc"><i class="fa fa-map-marker"></i></span></li>
+          <li>
+            <i class="fa fa-music"></i>
+            <label class="fileContainer">
+              <input type="file">
+            </label>
+          </li>
+          <li>
+            <i class="fa fa-image"></i>
+            <label class="fileContainer">
+              <input type="file" name="file" id="file" class="inputfile" #uploadFile1 (change)="uploadFileImg()">
+            </label>
+          </li>
+          <li>
+            <i class="fa fa-video-camera"></i>
+            <label class="fileContainer">
+              <input type="file">
+            </label>
+          </li>
+          <li>
+            <i class="fa fa-camera"></i>
+            <label class="fileContainer">
+              <input type="file">
+            </label>
+          </li>
+          <li class="preview-btn">
+            <button class="post-btn-preview" type="submit" data-ripple="">Preview</button>
+          </li>
+        </ul>
+        <div *ngIf="arrayPicture[0]!=null">
+          <div *ngFor="let img of arrayPicture">
+            <img [src]="img" height="300" width="500">
+          </div>
+        </div>
+        <button class="post-btn" type="submit" data-ripple="">Post</button>
+      </div>
+    </form>
+  </div>
+</div>
+

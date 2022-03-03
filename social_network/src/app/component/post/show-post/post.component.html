@@ -1,0 +1,123 @@
+<div class="central-meta item" *ngFor="let post of posts">
+  <div class="user-post">
+    <div class="friend-info">
+      <figure>
+        <img src="{{post.users.avatar}}" alt="">
+      </figure>
+      <div class="friend-name">
+        <div class="more">
+          <div class="more-post-optns"><i class="ti-more-alt"></i>
+            <ul>
+              <li (click)="openFormEditPost(post)"><i class="fa fa-pencil-square-o"></i>Edit Post</li>
+              <li (click)="delete(post)"><i class="fa fa-trash-o"></i>Delete Post</li>
+              <li class="bad-report"><i class="fa fa-flag"></i>Report Post</li>
+              <li><i class="fa fa-address-card-o"></i>Boost This Post</li>
+              <li><i class="fa fa-clock-o"></i>Schedule Post</li>
+              <li><i class="fa fa-wpexplorer"></i>Select as featured</li>
+              <li><i class="fa fa-bell-slash-o"></i>Turn off Notifications</li>
+            </ul>
+          </div>
+        </div>
+        <ins><a href="time-line.html" title="">{{post.users.name}}</a></ins>
+        <span><i class="fa fa-globe"></i> published: {{post.time}} </span>
+      </div>
+      <div class="post-meta">
+        <p>
+          {{post.content}}
+        </p>
+        <figure>
+          <div *ngIf="post.image != null" class="img-bunch">
+            <img src="{{post.image}}" style="height: 520px">
+          </div>
+        </figure>
+        <div class="we-video-info">
+          <ul>
+            <li>
+																<span class="views" title="views">
+																	<i class="fa fa-eye"></i>
+																	<ins>1.2k</ins>
+																</span>
+            </li>
+            <li>
+              <div class="likes heart" title="Like/Dislike">❤ <span>0</span></div>
+            </li>
+            <li>
+																<span class="comment" title="Comments">
+																	<i class="fa fa-commenting"></i>
+																	<ins>52</ins>
+																</span>
+            </li>
+
+            <li>
+																<span>
+																	<a class="share-pst" href="#" title="Share">
+																		<i class="fa fa-share-alt"></i>
+																	</a>
+																	<ins>20</ins>
+																</span>
+            </li>
+          </ul>
+          <div class="users-thumb-list">
+            <a data-toggle="tooltip" title="Anderw" href="#">
+              <img alt="" src="../../../../assets/images/resources/userlist-1.jpg">
+            </a>
+            <a data-toggle="tooltip" title="frank" href="#">
+              <img alt="" src="../../../../assets/images/resources/userlist-2.jpg">
+            </a>
+            <a data-toggle="tooltip" title="Sara" href="#">
+              <img alt="" src="../../../../assets/images/resources/userlist-3.jpg">
+            </a>
+            <a data-toggle="tooltip" title="Amy" href="#">
+              <img alt="" src="../../../../assets/images/resources/userlist-4.jpg">
+            </a>
+            <a data-toggle="tooltip" title="Ema" href="#">
+              <img alt="" src="../../../../assets/images/resources/userlist-5.jpg">
+            </a>
+            <span><strong>You</strong>, <b>Sarah</b> and <a href="#"
+                                                            title="">24+ more</a> liked</span>
+          </div>
+        </div>
+      </div>
+      <div class="coment-area" style="display: block;">
+        <ul class="we-comet">
+          <li>
+            <div class="comet-avatar">
+              <img src="../../../../assets/images/resources/nearly3.jpg" alt="">
+            </div>
+            <div class="we-comment">
+              <h5><a href="time-line.html" title="">Jason borne</a></h5>
+              <p>we are working for the dance and sing songs. this video is very awesome for the
+                youngster. please vote this video and like our channel</p>
+              <div class="inline-itms">
+                <span>1 year ago</span>
+                <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+                <a href="#" title=""><i class="fa fa-heart"></i><span>20</span></a>
+              </div>
+            </div>
+
+          </li>
+          <li class="post-comment">
+            <div class="comet-avatar">
+              <img src="{{post.users.avatar}}">
+            </div>
+            <div class="post-comt-box">
+              <form method="post">
+                <textarea placeholder="Post your comment"></textarea>
+                <div class="add-smiles">
+                  <div class="uploadimage">
+                    <i class="fa fa-image"></i>
+                    <label class="fileContainer">
+                      <input type="file">
+                    </label>
+                  </div>
+                </div>
+                <button type="submit">Enter</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
