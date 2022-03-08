@@ -6,6 +6,7 @@ export class Users {
   // @ts-ignore
   private _avatar: string;
   private _roles: any;
+
   constructor(id: number, name: string, username: string, email: string, avatar: string, roles: any) {
     this._id = id;
     this._name = name;

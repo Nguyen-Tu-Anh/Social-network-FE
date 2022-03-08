@@ -9,6 +9,7 @@ export class Post {
   // @ts-ignore
   public time: Date;
   public image: string;
+  public status?: boolean;
 
 
 

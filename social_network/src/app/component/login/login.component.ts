@@ -48,7 +48,9 @@ export class LoginComponent implements OnInit {
         // @ts-ignore
         this.tokenService.setUser(JSON.stringify(data.users));
         console.log(data)
-        this.router.navigate(['home']);
+        this.router.navigate(['home']).then(() => {
+          window.location.reload();
+        });
       } else {
         this.isLogin = true;
         this.status = '* Username or password is not correct! Please Try Again *';

@@ -24,6 +24,8 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import { EditPostComponent } from './component/post/edit-post/edit-post.component';
 import {httpInterceptorProviders} from "./security/auth.interceptor";
 import { ChatComponent } from './component/chat/chat.component';
+import { PageCommentComponent } from './component/post/comment/page-comment/page-comment.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 export const appRoutes: Routes = [
@@ -40,25 +42,27 @@ export const appRoutes: Routes = [
     PostComponent,
     CreatePostComponent,
     EditPostComponent,
-    ChatComponent
+    ChatComponent,
+    PageCommentComponent,
   ],
-  imports: [
-    RouterModule.forRoot(appRoutes),
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    FormsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    HttpClientModule,
+    imports: [
+        RouterModule.forRoot(appRoutes),
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        FormsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        HttpClientModule,
 
-    AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-  ],
+        AngularFireStorageModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireAuthModule,
+        MatPaginatorModule,
+    ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })

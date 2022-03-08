@@ -14,10 +14,7 @@
         <mat-card-content class="login__header__right__card__content">
           <form class="login-form" #f="ngForm" (ngSubmit)="f.form.valid&&ngSubmit()" novalidate>
             <input name="username" [(ngModel)]="form.username" #username="ngModel" required minlength="3" placeholder="Enter username">
-
-
             <input type="password" name="password" [(ngModel)]="form.password" #password="ngModel" minlength="6" required placeholder="Enter password">
-
             <button class="login-button" type="submit">Log In</button>
 
           </form>

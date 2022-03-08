@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TokenService} from "../../service/token.service";
+import {Users} from "../../model/Users";
 
 @Component({
   selector: 'app-home',
@@ -7,14 +8,22 @@ import {TokenService} from "../../service/token.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  // @ts-ignore
+  user: Users;
   constructor(private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    // @ts-ignore
+    this.user = JSON.parse(window.sessionStorage.getItem("User_Key"));
   }
   logout() {
     this.tokenService.logout();
-
   }
+
+
+  reload() {
+    window.location.reload();
+  }
+
 
 }

@@ -17,7 +17,7 @@
     <div class="mh-head second">
       <form class="mh-form">
         <input placeholder="search"/>
-        <a href="#/" class="fa fa-search"></a>
+        <a href="#" class="fa fa-search"></a>
       </form>
     </div>
     <nav id="menu" class="res-menu">
@@ -229,7 +229,7 @@
       <ul class="setting-area" style="margin-left: 320px;">
 <!--          <li><a href="newsfeed.html" title="Home"><i class="fa fa-home"></i></a></li>-->
           <li>
-            <a href="#" title="Friend Requests">
+            <a title="FriendRequests">
               <i class="fa fa-user"></i><em class="bg-red">5</em>
             </a>
             <div class="dropdowns">
@@ -294,8 +294,8 @@
                       <i>9 hours ago</i>
                     </div>
                     <div class="add-del-friends">
-                      <a href="#" title=""><i class="fa fa-heart"></i></a>
-                      <a href="#" title=""><i class="fa fa-trash"></i></a>
+                      <a  title=""><i class="fa fa-heart"></i></a>
+                      <a  title=""><i class="fa fa-trash"></i></a>
                     </div>
                   </div>
                 </li>
@@ -316,18 +316,18 @@
                   </div>
                 </li>
               </ul>
-              <a href="friend-requests.html" title="" class="more-mesg">View All</a>
+              <a  title="" class="more-mesg">View All</a>
             </div>
           </li>
           <li>
-            <a href="#" title="Notification">
+            <a title="Notification">
               <i class="fa fa-bell"></i><em class="bg-purple">7</em>
             </a>
             <div class="dropdowns">
               <span>4 New Notifications <a href="#" title="">Mark all as read</a></span>
               <ul class="drops-menu">
                 <li>
-                  <a href="notifications.html" title="">
+                  <a  title="">
                     <figure>
                       <img src="../../../assets/images/resources/thumb-1.jpg" alt="">
                       <span class="status f-online"></span>
@@ -340,7 +340,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="notifications.html">
+                  <a >
                     <figure>
                       <img src="../../../assets/images/resources/thumb-2.jpg" alt="">
                       <span class="status f-online"></span>
@@ -357,7 +357,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="notifications.html">
+                  <a >
                     <figure>
                       <img src="../../../assets/images/resources/thumb-3.jpg">
                       <span class="status f-online"></span>
@@ -374,7 +374,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="notifications.html" title="">
+                  <a  title="">
                     <figure>
                       <img src="../../../assets/images/resources/thumb-4.jpg" alt="">
                       <span class="status f-online"></span>
@@ -388,7 +388,7 @@
                   <span class="tag">New</span>
                 </li>
                 <li>
-                  <a href="notifications.html" title="">
+                  <a  title="">
                     <figure>
                       <img src="../../../assets/images/resources/thumb-5.jpg" alt="">
                       <span class="status f-online"></span>
@@ -402,13 +402,13 @@
                   <span class="tag">New</span>
                 </li>
               </ul>
-              <a href="notifications.html" title="" class="more-mesg">View All</a>
+              <a title="" class="more-mesg">View All</a>
             </div>
           </li>
           <li>
-            <a href="#" title="Messages" data-ripple=""><i class="fa fa-commenting"></i><em class="bg-blue">9</em></a>
+            <a title="Messages" data-ripple=""><i class="fa fa-commenting"></i><em class="bg-blue">9</em></a>
             <div class="dropdowns">
-              <span>5 New Messages <a href="#" title="">Mark all as read</a></span>
+              <span>5 New Messages <a title="">Mark all as read</a></span>
               <ul class="drops-menu">
                 <li>
                   <a class="show-mesg" href="#" title="">
@@ -424,7 +424,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="show-mesg" href="#" title="">
+                  <a class="show-mesg" title="">
                     <figure>
                       <img src="../../../assets/images/resources/thumb-2.jpg" alt="">
                       <span class="status f-offline"></span>
@@ -437,7 +437,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="show-mesg" href="#" title="">
+                  <a class="show-mesg" title="">
                     <figure>
                       <img src="../../../assets/images/resources/thumb-3.jpg" alt="">
                       <span class="status f-online"></span>
@@ -450,7 +450,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="show-mesg" href="#" title="">
+                  <a class="show-mesg" title="">
                     <figure>
                       <img src="../../../assets/images/resources/thumb-4.jpg" alt="">
                       <span class="status f-offline"></span>
@@ -464,7 +464,7 @@
                   <span class="tag">New</span>
                 </li>
                 <li>
-                  <a class="show-mesg" href="#" title="">
+                  <a class="show-mesg"  title="">
                     <figure>
                       <img src="../../../assets/images/resources/thumb-5.jpg" alt="">
                       <span class="status f-away"></span>
@@ -478,11 +478,11 @@
                   <span class="tag">New</span>
                 </li>
               </ul>
-              <a href="chat-messenger.html" title="" class="more-mesg">View All</a>
+              <a title="" class="more-mesg">View All</a>
             </div>
           </li>
 
-          <li><a href="#" title="Help" data-ripple=""><i class="fa fa-question-circle"></i></a>
+          <li><a title="Help" data-ripple=""><i class="fa fa-question-circle"></i></a>
             <div class="dropdowns helps">
               <span>Quick Help</span>
               <form method="post">
@@ -501,12 +501,12 @@
           </li>
         </ul>
       <div class="user-img">
-        <h5>Jack Carter</h5>
-        <img src="../../../assets/images/resources/admin.jpg" alt="">
+        <h5>{{user.name}}</h5>
+        <img src="{{user.avatar}}" height="45" width="45" alt="">
         <span class="status f-online"></span>
         <div class="user-setting">
 
-          <span class="seting-title">User setting <a href="#" title="">see all</a></span>
+          <span class="seting-title">User setting <a>see all</a></span>
           <ul class="log-out">
             <li><a href="about.html" title=""><i class="ti-user"></i> view profile</a></li>
             <li><a href="setting.html" title=""><i class="ti-pencil-alt"></i>edit profile</a></li>
@@ -860,7 +860,9 @@
                 <app-create-post></app-create-post>
 
                 <div class="loadMore">
+
                 <app-show-post></app-show-post>
+
                 </div>
               </div><!-- centerl meta -->
 
@@ -868,157 +870,157 @@
               <!-- sidebar -->
 
 
-              <!--              <div class="col-lg-3">-->
-              <!--                <aside class="sidebar static right">-->
-              <!--                  <div class="widget">-->
-              <!--                    <h4 class="widget-title">Your page</h4>-->
-              <!--                    <div class="your-page">-->
-              <!--                      <figure>-->
-              <!--                        <a href="#" title=""><img src="assets/images/resources/friend-avatar9.jpg" alt=""></a>-->
-              <!--                      </figure>-->
-              <!--                      <div class="page-meta">-->
-              <!--                        <a href="#" title="" class="underline">My Creative Page</a>-->
-              <!--                        <span><i class="ti-comment"></i><a href="insight.html" title="">Messages <em>9</em></a></span>-->
-              <!--                        <span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>2</em></a></span>-->
-              <!--                      </div>-->
-              <!--                      <ul class="page-publishes">-->
-              <!--                        <li>-->
-              <!--                          <span><i class="ti-pencil-alt"></i>Publish</span>-->
-              <!--                        </li>-->
-              <!--                        <li>-->
-              <!--                          <span><i class="ti-camera"></i>Photo</span>-->
-              <!--                        </li>-->
-              <!--                        <li>-->
-              <!--                          <span><i class="ti-video-camera"></i>Live</span>-->
-              <!--                        </li>-->
-              <!--                        <li>-->
-              <!--                          <span><i class="fa fa-user-plus"></i>Invite</span>-->
-              <!--                        </li>-->
-              <!--                      </ul>-->
-              <!--                      <div class="page-likes">-->
-              <!--                        <ul class="nav nav-tabs likes-btn">-->
-              <!--                          <li class="nav-item"><a class="active" href="#link1" data-toggle="tab"-->
-              <!--                                                  data-ripple="">likes</a></li>-->
-              <!--                          <li class="nav-item"><a class="" href="#link2" data-toggle="tab" data-ripple="">views</a></li>-->
-              <!--                        </ul>-->
-              <!--                        &lt;!&ndash; Tab panes &ndash;&gt;-->
-              <!--                        <div class="tab-content">-->
-              <!--                          <div class="tab-pane active fade show " id="link1">-->
-              <!--                            <span><i class="ti-heart"></i>884</span>-->
-              <!--                            <a href="#" title="weekly-likes">35 new likes this week</a>-->
-              <!--                            <div class="users-thumb-list">-->
-              <!--                              <a href="#" title="Anderw" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-1.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="frank" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-2.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Sara" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-3.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Amy" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-4.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Ema" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-5.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Sophie" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-6.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Maria" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-7.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                            </div>-->
-              <!--                          </div>-->
-              <!--                          <div class="tab-pane fade" id="link2">-->
-              <!--                            <span><i class="fa fa-eye"></i>440</span>-->
-              <!--                            <a href="#" title="weekly-likes">440 new views this week</a>-->
-              <!--                            <div class="users-thumb-list">-->
-              <!--                              <a href="#" title="Anderw" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-1.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="frank" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-2.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Sara" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-3.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Amy" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-4.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Ema" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-5.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Sophie" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-6.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                              <a href="#" title="Maria" data-toggle="tooltip">-->
-              <!--                                <img src="assets/images/resources/userlist-7.jpg" alt="">-->
-              <!--                              </a>-->
-              <!--                            </div>-->
-              <!--                          </div>-->
-              <!--                        </div>-->
-              <!--                      </div>-->
-              <!--                    </div>-->
-              <!--                  </div>&lt;!&ndash; page like widget &ndash;&gt;-->
-              <!--                  <div class="widget">-->
-              <!--                    <h4 class="widget-title">Explor Events <a title="" href="#" class="see-all">See All</a></h4>-->
-              <!--                    <div class="rec-events bg-purple">-->
-              <!--                      <i class="ti-gift"></i>-->
-              <!--                      <h6><a href="#" title="">Ocean Motel good night event in columbia</a></h6>-->
-              <!--                      <img src="assets/images/clock.png" alt="">-->
-              <!--                    </div>-->
-              <!--                    <div class="rec-events bg-blue">-->
-              <!--                      <i class="ti-microphone"></i>-->
-              <!--                      <h6><a href="#" title="">2016 The 3rd International Conference</a></h6>-->
-              <!--                      <img src="assets/images/clock.png" alt="">-->
-              <!--                    </div>-->
-              <!--                  </div>&lt;!&ndash; explore events &ndash;&gt;-->
-              <!--                  <div class="widget">-->
-              <!--                    <h4 class="widget-title">Profile intro</h4>-->
-              <!--                    <ul class="short-profile">-->
-              <!--                      <li>-->
-              <!--                        <span>about</span>-->
-              <!--                        <p>Hi, i am jhon kates, i am 32 years old and worked as a web developer in microsoft </p>-->
-              <!--                      </li>-->
-              <!--                      <li>-->
-              <!--                        <span>fav tv show</span>-->
-              <!--                        <p>Sacred Games, Spartcus Blood, Games of Theron </p>-->
-              <!--                      </li>-->
-              <!--                      <li>-->
-              <!--                        <span>favourit music</span>-->
-              <!--                        <p>Justin Biber, Shakira, Nati Natasah</p>-->
-              <!--                      </li>-->
-              <!--                    </ul>-->
-              <!--                  </div>&lt;!&ndash; profile intro widget &ndash;&gt;-->
-              <!--                  <div class="widget stick-widget">-->
-              <!--                    <h4 class="widget-title">Recent Links <a title="" href="#" class="see-all">See All</a></h4>-->
-              <!--                    <ul class="recent-links">-->
-              <!--                      <li>-->
-              <!--                        <figure><img src="assets/images/resources/recentlink-1.jpg" alt=""></figure>-->
-              <!--                        <div class="re-links-meta">-->
-              <!--                          <h6><a href="#" title="">moira's fade reaches much farther than you think.</a></h6>-->
-              <!--                          <span>2 weeks ago </span>-->
-              <!--                        </div>-->
-              <!--                      </li>-->
-              <!--                      <li>-->
-              <!--                        <figure><img src="assets/images/resources/recentlink-2.jpg" alt=""></figure>-->
-              <!--                        <div class="re-links-meta">-->
-              <!--                          <h6><a href="#" title="">daniel asks if we want him to do the voice of doomfist</a></h6>-->
-              <!--                          <span>3 months ago </span>-->
-              <!--                        </div>-->
-              <!--                      </li>-->
-              <!--                      <li>-->
-              <!--                        <figure><img src="assets/images/resources/recentlink-3.jpg" alt=""></figure>-->
-              <!--                        <div class="re-links-meta">-->
-              <!--                          <h6><a href="#" title="">the pitnik overwatch scandals.</a></h6>-->
-              <!--                          <span>1 day before</span>-->
-              <!--                        </div>-->
-              <!--                      </li>-->
-              <!--                    </ul>-->
-              <!--                  </div>&lt;!&ndash; recent links &ndash;&gt;-->
-              <!--                </aside>-->
-              <!--              </div>-->
+                            <div class="col-lg-3">
+                              <aside class="sidebar static right">
+                                <div class="widget">
+                                  <h4 class="widget-title">Your page</h4>
+                                  <div class="your-page">
+                                    <figure>
+                                      <a href="#" title=""><img src="assets/images/resources/friend-avatar9.jpg" alt=""></a>
+                                    </figure>
+                                    <div class="page-meta">
+                                      <a href="#" title="" class="underline">My Creative Page</a>
+                                      <span><i class="ti-comment"></i><a href="insight.html" title="">Messages <em>9</em></a></span>
+                                      <span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>2</em></a></span>
+                                    </div>
+                                    <ul class="page-publishes">
+                                      <li>
+                                        <span><i class="ti-pencil-alt"></i>Publish</span>
+                                      </li>
+                                      <li>
+                                        <span><i class="ti-camera"></i>Photo</span>
+                                      </li>
+                                      <li>
+                                        <span><i class="ti-video-camera"></i>Live</span>
+                                      </li>
+                                      <li>
+                                        <span><i class="fa fa-user-plus"></i>Invite</span>
+                                      </li>
+                                    </ul>
+                                    <div class="page-likes">
+                                      <ul class="nav nav-tabs likes-btn">
+                                        <li class="nav-item"><a class="active" href="#link1" data-toggle="tab"
+                                                                data-ripple="">likes</a></li>
+                                        <li class="nav-item"><a class="" href="#link2" data-toggle="tab" data-ripple="">views</a></li>
+                                      </ul>
+                                      <!-- Tab panes -->
+                                      <div class="tab-content">
+                                        <div class="tab-pane active fade show " id="link1">
+                                          <span><i class="ti-heart"></i>884</span>
+                                          <a href="#" title="weekly-likes">35 new likes this week</a>
+                                          <div class="users-thumb-list">
+                                            <a href="#" title="Anderw" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-1.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="frank" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-2.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Sara" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-3.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Amy" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-4.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Ema" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-5.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Sophie" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-6.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Maria" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-7.jpg" alt="">
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="link2">
+                                          <span><i class="fa fa-eye"></i>440</span>
+                                          <a href="#" title="weekly-likes">440 new views this week</a>
+                                          <div class="users-thumb-list">
+                                            <a href="#" title="Anderw" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-1.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="frank" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-2.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Sara" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-3.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Amy" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-4.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Ema" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-5.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Sophie" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-6.jpg" alt="">
+                                            </a>
+                                            <a href="#" title="Maria" data-toggle="tooltip">
+                                              <img src="assets/images/resources/userlist-7.jpg" alt="">
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!-- page like widget -->
+                                <div class="widget">
+                                  <h4 class="widget-title">Explor Events <a title="" href="#" class="see-all">See All</a></h4>
+                                  <div class="rec-events bg-purple">
+                                    <i class="ti-gift"></i>
+                                    <h6><a href="#" title="">Ocean Motel good night event in columbia</a></h6>
+                                    <img src="assets/images/clock.png" alt="">
+                                  </div>
+                                  <div class="rec-events bg-blue">
+                                    <i class="ti-microphone"></i>
+                                    <h6><a href="#" title="">2016 The 3rd International Conference</a></h6>
+                                    <img src="assets/images/clock.png" alt="">
+                                  </div>
+                                </div><!-- explore events -->
+                                <div class="widget">
+                                  <h4 class="widget-title">Profile intro</h4>
+                                  <ul class="short-profile">
+                                    <li>
+                                      <span>about</span>
+                                      <p>Hi, i am jhon kates, i am 32 years old and worked as a web developer in microsoft </p>
+                                    </li>
+                                    <li>
+                                      <span>fav tv show</span>
+                                      <p>Sacred Games, Spartcus Blood, Games of Theron </p>
+                                    </li>
+                                    <li>
+                                      <span>favourit music</span>
+                                      <p>Justin Biber, Shakira, Nati Natasah</p>
+                                    </li>
+                                  </ul>
+                                </div><!-- profile intro widget -->
+                                <div class="widget stick-widget">
+                                  <h4 class="widget-title">Recent Links <a title="" href="#" class="see-all">See All</a></h4>
+                                  <ul class="recent-links">
+                                    <li>
+                                      <figure><img src="assets/images/resources/recentlink-1.jpg" alt=""></figure>
+                                      <div class="re-links-meta">
+                                        <h6><a href="#" title="">moira's fade reaches much farther than you think.</a></h6>
+                                        <span>2 weeks ago </span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <figure><img src="assets/images/resources/recentlink-2.jpg" alt=""></figure>
+                                      <div class="re-links-meta">
+                                        <h6><a href="#" title="">daniel asks if we want him to do the voice of doomfist</a></h6>
+                                        <span>3 months ago </span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <figure><img src="assets/images/resources/recentlink-3.jpg" alt=""></figure>
+                                      <div class="re-links-meta">
+                                        <h6><a href="#" title="">the pitnik overwatch scandals.</a></h6>
+                                        <span>1 day before</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div><!-- recent links -->
+                              </aside>
+                            </div>
 
 
               <!-- end sidebar -->
