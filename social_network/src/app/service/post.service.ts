@@ -49,7 +49,11 @@ export class PostService {
     return this.http.post<any>(environment.API_LOCAL + 'posts/' + idPost + '/createComment', comment)
   }
 
-  findAllComment() {
+  findAllComment(): Observable<any> {
     return this.http.get(environment.API_LOCAL + 'posts/comments')
+  }
+
+  deleteComment(id: number): Observable<any> {
+    return this.http.delete<any>(environment.API_LOCAL + 'posts/' + id + '/deleteComment')
   }
 }

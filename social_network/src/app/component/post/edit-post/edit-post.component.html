@@ -6,7 +6,7 @@
       <img src="{{post.users.avatar}}">
     </div>
     <form class="newpst-input" #f="ngForm" (ngSubmit)="f.form.valid&&ngSubmit()">
-      <textarea rows="2" [(ngModel)]="content" name="content"></textarea>
+      <input style="padding: 10px; line-height: 28px; width: 320px; border: none" rows="2" [(ngModel)]="content" name="content">
 
       <div class="attachments">
         <ul>

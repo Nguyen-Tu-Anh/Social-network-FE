@@ -10,20 +10,19 @@ import {Users} from "../../model/Users";
 export class HomeComponent implements OnInit {
   // @ts-ignore
   user: Users;
-  constructor(private tokenService: TokenService) { }
+  constructor() { }
 
   ngOnInit(): void {
     // @ts-ignore
     this.user = JSON.parse(window.sessionStorage.getItem("User_Key"));
   }
-  logout() {
-    this.tokenService.logout();
-  }
+
 
 
   reload() {
     window.location.reload();
   }
+
 
 
 }

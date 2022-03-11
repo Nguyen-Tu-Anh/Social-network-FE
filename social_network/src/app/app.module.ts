@@ -26,11 +26,18 @@ import {httpInterceptorProviders} from "./security/auth.interceptor";
 import { ChatComponent } from './component/chat/chat.component';
 import { PageCommentComponent } from './component/post/comment/page-comment/page-comment.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { HeaderComponent } from './component/header/header.component';
+import { FriendRequestComponent } from './component/friend/friend-request/friend-request.component';
+import { AddFriendComponent } from './component/friend/add-friend/add-friend.component';
+import { TimelineComponent } from './component/Profile/timeline/timeline.component';
+
 
 
 export const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'friend-request', component: FriendRequestComponent},
+  {path: 'add-friend', component: AddFriendComponent},
 ];
 
 @NgModule({
@@ -44,6 +51,10 @@ export const appRoutes: Routes = [
     EditPostComponent,
     ChatComponent,
     PageCommentComponent,
+    HeaderComponent,
+    FriendRequestComponent,
+    AddFriendComponent,
+    TimelineComponent,
   ],
     imports: [
         RouterModule.forRoot(appRoutes),

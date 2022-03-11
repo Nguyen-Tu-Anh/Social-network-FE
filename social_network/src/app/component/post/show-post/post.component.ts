@@ -5,6 +5,7 @@ import {RegisterComponent} from "../../register/register.component";
 import {MatDialog} from "@angular/material/dialog";
 import {EditPostComponent} from "../edit-post/edit-post.component";
 import {Users} from "../../../model/Users";
+import {Comment} from "../../../model/Comment";
 
 @Component({
   selector: 'app-show-post',
@@ -68,5 +69,12 @@ export class PostComponent implements OnInit {
       this.likeNumbers = data;
     })
   }
+
+  deleteComment(id: number) {
+    this.postService.deleteComment(id).subscribe(data => {
+      window.location.reload();
+    })
+  }
+
 
 }

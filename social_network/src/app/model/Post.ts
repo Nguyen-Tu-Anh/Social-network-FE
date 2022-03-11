@@ -1,4 +1,5 @@
 import {Users} from "./Users";
+import {Comment} from "./Comment";
 
 
 export class Post {
@@ -10,7 +11,8 @@ export class Post {
   public time: Date;
   public image: string;
   public status?: boolean;
-
+  // @ts-ignore
+  public comments: Comment[];
 
 
 

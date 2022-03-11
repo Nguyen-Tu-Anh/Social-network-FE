@@ -4,7 +4,11 @@ import {Post} from "./Post";
 export class Comment {
   // @ts-ignore
   public id: number;
+  // @ts-ignore
+
   public content: string;
+  // @ts-ignore
+
   public image: string;
   // @ts-ignore
   public time: Date;
@@ -18,4 +22,5 @@ export class Comment {
     this.content = content;
     this.image = image;
   }
+
 }

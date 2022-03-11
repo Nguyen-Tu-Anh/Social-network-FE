@@ -1,0 +1,30 @@
+<br>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h3>Friend Request ({{numberOfRequest}})</h3>
+      <div class="people-nearby">
+        <div class="nearby-user" *ngFor="let request of listFriendRequest">
+          <div class="row">
+            <div class="col-md-2 col-sm-2">
+              <img src="{{request.sender.avatar}}" alt="user" class="profile-photo-lg">
+            </div>
+            <div class="col-md-7 col-sm-7">
+              <h5><a href="#" class="profile-link">{{request.sender.name}}</a></h5>
+              <p>{{request.sender.email}}</p>
+              <p class="text-muted">500m away</p>
+            </div>
+            <div class="col-md-3 col-sm-3">
+              <button class="btn btn-warning pull-right" (click)="reject(request.id)">Reject</button>
+              <button class="btn btn-success pull-right" (click)="accept(request.id)">Accept</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

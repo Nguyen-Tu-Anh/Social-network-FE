@@ -6,6 +6,7 @@ import {PostService} from "../../../../service/post.service";
 import {AngularFireStorage} from "@angular/fire/compat/storage";
 import {finalize} from "rxjs";
 import {PageEvent} from "@angular/material/paginator";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-page-comment',
@@ -13,11 +14,14 @@ import {PageEvent} from "@angular/material/paginator";
   styleUrls: ['./page-comment.component.css']
 })
 export class PageCommentComponent implements OnInit {
-  // @ts-ignore
-  comments: [Comment[]]
+  @Input()
+    // @ts-ignore
+  comments: Comment[]
 
   @Input()// @ts-ignore
   post: Post;
+
+
   title = 'demoUploadFile';
 
   @ViewChild('uploadFile1', {static: true}) public avatarDom1: ElementRef | undefined;
@@ -48,12 +52,12 @@ export class PageCommentComponent implements OnInit {
   }
 
   ngSubmit() {
-
     this.comment = new Comment(
       this.content_comment,
       this.image = this.arrayPicture[0]
     )
     this.postService.createComment(this.comment, this.post.id).subscribe(data => {
+      window.location.reload();
     })
 
   }
@@ -81,12 +85,11 @@ export class PageCommentComponent implements OnInit {
     this.submit();
   }
 
-  findAllCommentByPostId() {
+
+  // @ts-ignore
+  findAllCommentByPostId(): [Comment[]] {
     this.postService.findAllComment().subscribe(data => {
-      console.log("data --->", data)
-      // @ts-ignore
-      this.comments = data;
-      console.log("this.comments ---> ", this.comments)
+      return data;
     })
   }
 
