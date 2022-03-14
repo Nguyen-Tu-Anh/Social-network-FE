@@ -38,6 +38,7 @@ export const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'friend-request', component: FriendRequestComponent},
   {path: 'add-friend', component: AddFriendComponent},
+  {path: 'time-line', component: TimelineComponent},
 ];
 
 @NgModule({
