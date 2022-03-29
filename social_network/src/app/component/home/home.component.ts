@@ -16,13 +16,7 @@ export class HomeComponent implements OnInit {
     // @ts-ignore
     this.user = JSON.parse(window.sessionStorage.getItem("User_Key"));
   }
-
-
-
   reload() {
     window.location.reload();
   }
-
-
-
 }

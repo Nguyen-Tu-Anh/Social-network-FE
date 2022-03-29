@@ -8,6 +8,9 @@
       </div>
       <div class="post-comt-box">
         <form method="post" #f="ngForm" (ngSubmit)="f.form.valid&&ngSubmit()">
+          <div *ngFor="let img of arrayPicture" style="height: 48px; width: 68px">
+            <img [src]="img" >
+          </div>
           <textarea placeholder="Post your comment" [(ngModel)]="content_comment" name="content_comment"></textarea>
           <button style="color: #fa6342" type="submit">Post <i style="color: #fa6342" class="ti-export"></i> </button>
 
@@ -19,9 +22,7 @@
               </label>
             </div>
           </div>
-          <div *ngFor="let img of arrayPicture">
-            <img [src]="img" height="50" width="100">
-          </div>
+
         </form>
       </div>
     </li>

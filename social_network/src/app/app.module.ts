@@ -30,6 +30,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { FriendRequestComponent } from './component/friend/friend-request/friend-request.component';
 import { AddFriendComponent } from './component/friend/add-friend/add-friend.component';
 import { TimelineComponent } from './component/Profile/timeline/timeline.component';
+import { AllChatComponent } from './component/all-chat/all-chat.component';
 
 
 
@@ -39,6 +40,7 @@ export const appRoutes: Routes = [
   {path: 'friend-request', component: FriendRequestComponent},
   {path: 'add-friend', component: AddFriendComponent},
   {path: 'time-line', component: TimelineComponent},
+  {path: 'all-chat', component: AllChatComponent},
 ];
 
 @NgModule({
@@ -56,6 +58,7 @@ export const appRoutes: Routes = [
     FriendRequestComponent,
     AddFriendComponent,
     TimelineComponent,
+    AllChatComponent,
   ],
     imports: [
         RouterModule.forRoot(appRoutes),

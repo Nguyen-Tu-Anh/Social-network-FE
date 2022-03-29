@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {Users} from "./model/Users";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +7,4 @@ import {Users} from "./model/Users";
 })
 export class AppComponent {
   title = 'social_network';
-
-
 }

@@ -27,7 +27,7 @@ export class EditPostComponent implements OnInit {
   // @ts-ignore
   id: number;
 
-  content: string = 'okok';
+  content: string = '';
 
   // @ts-ignore
   image: string;
